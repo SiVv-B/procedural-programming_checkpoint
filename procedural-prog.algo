@@ -1,0 +1,32 @@
+PROCEDURE vectoriel(ps : INTEGER, VAR v1,v2: ARRAY_OF INTEGER )
+VAR
+i: INTEGER;
+BEGIN
+while (i< v1.lenght) 
+ps = ps + v1[i]*v2[i]  // si i de v1 = premiere ligne alors i de V2 premiere ligne  etc (i++) 
+i++; 
+    END_WHILE
+END
+
+ALGORITHM procedural-prog
+VAR
+    v1:array_name : ARRAY_OF INTEGER[2];   
+    v2:array_name : ARRAY_OF INTEGER[2];
+   
+BEGIN
+IF (v1.lenght = v2.lenght) THEN
+
+vectoriel(v1,v2,ps);
+
+
+    IF (ps:=0) THEN
+       écrire("V1 et V2 sont orthogonaux") ;
+   ELSE
+   écrire("V1 et V2 ne sont pas sont orthogonaux") ;
+   END_IF
+ELSE
+écrire("les vecteurs ne sont pas de même longueur")
+END_IF
+
+
+END
